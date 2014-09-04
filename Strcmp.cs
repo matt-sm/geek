@@ -1,5 +1,4 @@
 // strcmp
-//Rextester.Program.Main is the entry point for your code. Don't change it.
 
 using System;
 using System.Collections.Generic;
@@ -47,8 +46,6 @@ namespace Rextester
             
             for (i = 0; i < c1.Length && i < c2.Length; i++)
             {
-                //Console.WriteLine(c1[i] + "," + c2[i]);
-                
                 if (char.ToLower(c1[i]) == char.ToLower(c2[i]))
                 {
                     continue;
@@ -59,13 +56,9 @@ namespace Rextester
                 }
             }
             
-            // Console.WriteLine(i);
-            
             var ch1 = (c1.Length == i ? char.MinValue : c1[i]);
             var ch2 = (c2.Length == i ? char.MinValue : c2[i]);
 
-            // Console.WriteLine(ch1 + "," + ch2);
-            
             if (ch1 == ch2)
             {
                  return 0;
