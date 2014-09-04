@@ -1,5 +1,4 @@
 // IsPalindrome - tests if a string is an anagram of a palindrome
-//Rextester.Program.Main is the entry point for your code. Don't change it.
 
 using System;
 using System.Collections.Generic;
@@ -46,15 +45,7 @@ namespace Rextester
                {
                    d.Add(ch, 1);
                }
-                    
             }
-            
-            //foreach (var pair in d)
-          //{
-	        //  Console.WriteLine("{0}, {1}",
-		    //  pair.Key,
-		    //  pair.Value);
-	        //}
             
             int oddCounter = 0;
             foreach (var c in d.Values)
