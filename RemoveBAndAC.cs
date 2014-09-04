@@ -1,6 +1,5 @@
 // Remove “b” and “ac” from a given string
 // http://www.geeksforgeeks.org/remove-a-and-bc-from-a-given-string/
-//Rextester.Program.Main is the entry point for your code. Don't change it.
 
 using System;
 using System.Collections.Generic;
@@ -50,9 +49,7 @@ namespace Rextester
                {
                   state = Two;   
                }
-                
             }
-            
             
             s = new string(c);
             
