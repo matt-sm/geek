@@ -1,5 +1,4 @@
 // Euler Problem 1 - Multiples of 3 and 5
-//Rextester.Program.Main is the entry point for your code. Don't change it.
 
 using System;
 using System.Collections.Generic;
@@ -12,7 +11,6 @@ namespace Rextester
     {
         public static void Main(string[] args)
         {
-            //Your code goes here
             Console.WriteLine(SumMultiples(1000));
         }
         
