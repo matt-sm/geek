@@ -5,10 +5,31 @@ class HashTable:
         self.values = self.size * [None]
 
     def get(self, x):
-        return self.values[self.h(x)]
+        if not x:
+            raise ValueError('Invalid key')
+
+        i = self.h(x)
+        result = None
+
+        if self.values[i]:
+            pair = [p[1] for p in self.values[i] if p[0] == x]
+            if pair:
+                result = pair[0]
+
+        return result
 
     def set(self, x, y):
-        self.values[self.h(x)] = y
+        """Uses separate chaining for collsions
+        """
+        if not x:
+            raise ValueError('Invalid key')
+
+        i = self.h(x)
+
+        if not self.values[i]:
+            self.values[i] = []
+
+        self.values[i].append([x, y])
 
     def h(self, x):
         return hash(x) % self.size
