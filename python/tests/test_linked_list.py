@@ -9,9 +9,9 @@ def test_add_nodes(capfd):
     node1.next = node2
     node2.next = node3
 
-    node1.traverse()
+    print node1
     out, err = capfd.readouterr()
-    assert out == '1\n2\n3\n'
+    assert out == '1 2 3\n'
 
 
 def test_delete_node(capfd):
@@ -23,12 +23,12 @@ def test_delete_node(capfd):
     node2.next = node3
 
     node1.delete(node2)
-    node1.traverse()
+    print node1
     out, err = capfd.readouterr()
-    assert out == '1\n3\n'
+    assert out == '1 3\n'
 
     node1.delete(node3)
-    node1.traverse()
+    print node1
     out, err = capfd.readouterr()
     assert out == '1\n'
 

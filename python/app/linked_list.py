@@ -4,11 +4,14 @@ class Node:
         self.val = val
         self.next = None
 
-    def traverse(self):
+    def __str__(self):
         n = self
+        str = ''
         while n is not None:
-            print n.val
+            str += '{}{}'.format(n.val, '' if n.next is None else ' ')
             n = n.next
+
+        return str
 
     def delete(self, node):
         n = self
