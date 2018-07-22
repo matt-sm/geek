@@ -18,6 +18,6 @@ def test_preorder_traversal(capfd):
     tree.insert(BNode(11))
     tree.insert(BNode(4))
 
-    print tree
+    print(tree)
     out, err = capfd.readouterr()
     assert out == '10 2 1 4 12 11 \n'
